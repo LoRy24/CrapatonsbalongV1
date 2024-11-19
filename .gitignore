@@ -1,0 +1,3 @@
+./bin/*.bin
+./bin/*.elf
+./bin/*.o
