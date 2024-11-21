@@ -7,6 +7,7 @@ SECTIONS
 
     .text : {
         *(.text)
+        *(.rodata)
         FILL(0x00)
     }
 
@@ -17,6 +18,7 @@ SECTIONS
 
     .bss : {
         *(.bss)
+        *(COMMON)
         FILL(0x00)
     }
 
@@ -25,4 +27,6 @@ SECTIONS
     .signature : {
         SHORT (0xaa55)
     }
+
+    . = 0x7e00;
 }
