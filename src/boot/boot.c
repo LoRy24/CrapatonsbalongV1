@@ -1,4 +1,4 @@
-#pragma region Definizioni
+#pragma region Definitions
 
 #define VIDEO_MEMORY 0xb8000
 
@@ -7,7 +7,7 @@
 
 #pragma endregion
 
-#pragma region Variabili Globali
+#pragma region Global Variables
 
 char* video_memory = (char*) VIDEO_MEMORY;
 int cursorX = 0;
@@ -15,7 +15,7 @@ int cursorY = 0;
 
 #pragma endregion
 
-#pragma region Prototipi
+#pragma region Functions
 
 void cls();
 void printChar(char character, int x, int y);
@@ -30,7 +30,7 @@ void entry_point() {
     while (1);
 }
 
-#pragma region Funzioni Output
+#pragma region Output Utility Functions
 
 void printChar(char character, int x, int y) {
     int offset = (DISPLAY_COLS * y + x) * 2;
