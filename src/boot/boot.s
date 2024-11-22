@@ -1,19 +1,25 @@
+#
+# ValX Version 1.0.0
+# BootLoader Version 1.0.0/DEV1
+#
+
 .code16                                             # 16 bits code
+
+#
+# TEXT SECTION
+#
 
 .section        .text                               # Text section - Program's code section
 .global         _start                              # Set the _start address as global
-
-.extern         entry_point
 
 #
 # The _start label: the entrypoint of the program
 #
 _start:
-                movb                $0x02, %ah
-                movb                $0x00, %dh
-                movb                $0x00, %dl
-                int                 $0x10
+                jmp         .                       # Temp loop
 
-                call                entry_point     # Jump to the C code boot loader
+#
+# DATA SECTION
+#
 
 .section        .data                               # Static data section
