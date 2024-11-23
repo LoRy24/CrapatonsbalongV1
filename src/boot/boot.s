@@ -16,6 +16,40 @@
 # The _start label: the entrypoint of the program
 #
 _start:
+                movb        $0x0e, %ah
+                movb        $'H', %al
+                int         $0x10
+                movb        $0x0e, %ah
+                movb        $'e', %al
+                int         $0x10
+                movb        $0x0e, %ah
+                movb        $'l', %al
+                int         $0x10
+                movb        $0x0e, %ah
+                movb        $'l', %al
+                int         $0x10
+                movb        $0x0e, %ah
+                movb        $'o', %al
+                int         $0x10
+                movb        $0x0e, %ah
+                movb        $' ', %al
+                int         $0x10
+                movb        $0x0e, %ah
+                movb        $'W', %al
+                int         $0x10
+                movb        $0x0e, %ah
+                movb        $'o', %al
+                int         $0x10
+                movb        $0x0e, %ah
+                movb        $'r', %al
+                int         $0x10
+                movb        $0x0e, %ah
+                movb        $'l', %al
+                int         $0x10
+                movb        $0x0e, %ah
+                movb        $'d', %al
+                int         $0x10
+
                 jmp         .                       # Temp loop
 
 #
